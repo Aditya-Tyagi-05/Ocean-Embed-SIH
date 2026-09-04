@@ -8,3 +8,4 @@ fastapi
 uvicorn
 pyyaml
 pytest
+scikit-learn

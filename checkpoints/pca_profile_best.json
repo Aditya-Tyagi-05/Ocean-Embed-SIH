@@ -1,0 +1,8 @@
+{
+  "model": "pca_profile",
+  "components": 3,
+  "dates": [
+    "2019-01-01",
+    "2019-12-31"
+  ]
+}

@@ -12,6 +12,7 @@ from ocean_embed.models.vit import SpatiotemporalViT
 from ocean_embed.training.metrics import direction
 from ocean_embed.preprocessing.reconstruction_data import load_reconstruction_dataset
 from ocean_embed.models.reconstruction import ConvLSTMReconstructor, ViTReconstructor
+from ocean_embed.models.additional import TransformerReconstructor, ConvFormerReconstructor, UNet3DReconstructor
 
 app=FastAPI(title="Ocean Embed API",version="0.2.0")
 app.add_middleware(CORSMiddleware,allow_origins=["*"],allow_methods=["*"],allow_headers=["*"])
@@ -57,10 +58,16 @@ def reconstruct(date: str|None=None, model: str="ensemble", depth: float=150):
     def run(name):
         path=ROOT/"checkpoints"/f"{name}_reconstruction_best.pt"
         if not path.exists(): raise HTTPException(503,f"Missing reconstruction checkpoint: {path.name}")
-        m=ConvLSTMReconstructor(in_channels=7,out_channels=15) if name=="convlstm" else ViTReconstructor(in_channels=7,out_channels=15,steps=7,height=h,width=w)
+        if name=="convlstm": m=ConvLSTMReconstructor(in_channels=7,out_channels=15)
+        elif name in {"vit","spatiotemporal_vit"}: m=ViTReconstructor(in_channels=7,out_channels=15,steps=7,height=h,width=w)
+        elif name=="transformer": m=TransformerReconstructor(in_channels=7,out_channels=15,steps=7,height=h,width=w)
+        elif name=="convformer": m=ConvFormerReconstructor(in_channels=7,out_channels=15,steps=7,height=h,width=w)
+        elif name=="unet3d": m=UNet3DReconstructor(in_channels=7,out_channels=15)
+        else: raise HTTPException(400,"Unknown reconstruction model")
         m.load_state_dict(torch.load(path,map_location=DEVICE,weights_only=False)["model_state"]);m.to(DEVICE).eval()
         with torch.no_grad(): return m(x).cpu().numpy()[0]
-    pred=d["targets"][ti].transpose(1,2,0) if model=="persistence" else .5*run("convlstm")+.5*run("vit") if model=="ensemble" else run(model)
+    if model not in {"convlstm","vit","spatiotemporal_vit","transformer","convformer","unet3d"}: raise HTTPException(400,"Select a trained reconstruction model")
+    pred=run(model)
     di=int(np.abs(d["depths"]-depth).argmin()); target=d["targets"][ti].transpose(1,2,0); err=np.abs(pred-target); return {"model":model,"date":chosen,"dates":dates,"depth":float(d["depths"][di]),"depths":d["depths"].tolist(),"latitude":d["latitude"].tolist(),"longitude":d["longitude"].tolist(),"temperature":pred[:,:,di].tolist(),"profile":np.nanmean(pred,axis=(0,1)).tolist(),"observed_temperature":target[:,:,di].tolist(),"observed_profile":np.nanmean(target,axis=(0,1)).tolist(),"error":err[:,:,di].tolist(),"units":"°C","input_variables":list(d["channels"]),"status":"January 2019 Bay of Bengal proof-of-concept"}
 
 @app.get("/subsurface")
