@@ -1,0 +1,356 @@
+{
+  "files": [
+    {
+      "filename": "c3s_obs-sl_glo_phy-ssh_my_twosat-l4-duacs-0.25deg_P1D_1788105243736.nc",
+      "path": "/Users/aadi/Documents/Projects/Ocean_Embed/c3s_obs-sl_glo_phy-ssh_my_twosat-l4-duacs-0.25deg_P1D_1788105243736.nc",
+      "dimensions": {
+        "time": 31,
+        "latitude": 68,
+        "longitude": 80
+      },
+      "coordinates": {
+        "time": {
+          "first": "2020-01-01T00:00:00.000000000",
+          "last": "2020-01-31T00:00:00.000000000",
+          "size": 31,
+          "units": ""
+        },
+        "latitude": {
+          "first": "5.125",
+          "last": "21.875",
+          "size": 68,
+          "units": "degrees_north"
+        },
+        "longitude": {
+          "first": "80.125",
+          "last": "99.875",
+          "size": 80,
+          "units": "degrees_east"
+        }
+      },
+      "variables": {
+        "sla": {
+          "dims": [
+            "time",
+            "latitude",
+            "longitude"
+          ],
+          "shape": [
+            31,
+            68,
+            80
+          ],
+          "units": "m",
+          "min": -0.3043999969959259,
+          "max": 0.30059999227523804,
+          "mean": 0.015374657761783575,
+          "missing_pct": 22.334558823529413
+        }
+      },
+      "title": "DT merged two satellites Global Ocean Gridded SSALTO/DUACS Sea Surface Height L4 product and derived variables",
+      "compatible_for_wind_training": false
+    },
+    {
+      "filename": "cmems_mod_glo_phy_my_0.083deg_P1D-m_1788105438577.nc",
+      "path": "/Users/aadi/Documents/Projects/Ocean_Embed/cmems_mod_glo_phy_my_0.083deg_P1D-m_1788105438577.nc",
+      "dimensions": {
+        "time": 31,
+        "depth": 36,
+        "latitude": 205,
+        "longitude": 240
+      },
+      "coordinates": {
+        "time": {
+          "first": "2020-01-01T00:00:00.000000000",
+          "last": "2020-01-31T00:00:00.000000000",
+          "size": 31,
+          "units": ""
+        },
+        "latitude": {
+          "first": "5.0",
+          "last": "22.0",
+          "size": 205,
+          "units": "degrees_north"
+        },
+        "longitude": {
+          "first": "80.000015",
+          "last": "99.91668",
+          "size": 240,
+          "units": "degrees_east"
+        }
+      },
+      "variables": {
+        "thetao": {
+          "dims": [
+            "time",
+            "depth",
+            "latitude",
+            "longitude"
+          ],
+          "shape": [
+            31,
+            36,
+            205,
+            240
+          ],
+          "units": "degrees_C",
+          "min": 5.304452896118164,
+          "max": 31.405101776123047,
+          "mean": 21.770101413531133,
+          "missing_pct": 33.53252032520325
+        }
+      },
+      "title": "daily mean fields from Global Ocean Physics Analysis and Forecast updated Daily",
+      "compatible_for_wind_training": false
+    },
+    {
+      "filename": "cmems_mod_glo_phy_my_0.083deg_P1D-m_1788105477258.nc",
+      "path": "/Users/aadi/Documents/Projects/Ocean_Embed/cmems_mod_glo_phy_my_0.083deg_P1D-m_1788105477258.nc",
+      "dimensions": {
+        "time": 31,
+        "depth": 1,
+        "latitude": 205,
+        "longitude": 240
+      },
+      "coordinates": {
+        "time": {
+          "first": "2020-01-01T00:00:00.000000000",
+          "last": "2020-01-31T00:00:00.000000000",
+          "size": 31,
+          "units": ""
+        },
+        "latitude": {
+          "first": "5.0",
+          "last": "22.0",
+          "size": 205,
+          "units": "degrees_north"
+        },
+        "longitude": {
+          "first": "80.000015",
+          "last": "99.91668",
+          "size": 240,
+          "units": "degrees_east"
+        }
+      },
+      "variables": {
+        "uo": {
+          "dims": [
+            "time",
+            "depth",
+            "latitude",
+            "longitude"
+          ],
+          "shape": [
+            31,
+            1,
+            205,
+            240
+          ],
+          "units": "m s-1",
+          "min": -1.6724143028259277,
+          "max": 0.9466841816902161,
+          "mean": -0.10341696959356075,
+          "missing_pct": 25.3109756097561
+        },
+        "vo": {
+          "dims": [
+            "time",
+            "depth",
+            "latitude",
+            "longitude"
+          ],
+          "shape": [
+            31,
+            1,
+            205,
+            240
+          ],
+          "units": "m s-1",
+          "min": -1.2012085914611816,
+          "max": 1.3324381113052368,
+          "mean": 0.00013845509519874597,
+          "missing_pct": 25.3109756097561
+        }
+      },
+      "title": "daily mean fields from Global Ocean Physics Analysis and Forecast updated Daily",
+      "compatible_for_wind_training": false
+    },
+    {
+      "filename": "cmems_obs-wind_glo_phy_my_l3-metopb-ascat-asc-0.25deg_P1D-i_1788106188543.nc",
+      "path": "/Users/aadi/Documents/Projects/Ocean_Embed/cmems_obs-wind_glo_phy_my_l3-metopb-ascat-asc-0.25deg_P1D-i_1788106188543.nc",
+      "dimensions": {
+        "time": 31,
+        "latitude": 68,
+        "longitude": 80
+      },
+      "coordinates": {
+        "time": {
+          "first": "2020-01-01T00:00:00.000000000",
+          "last": "2020-01-31T00:00:00.000000000",
+          "size": 31,
+          "units": ""
+        },
+        "latitude": {
+          "first": "5.125",
+          "last": "21.875",
+          "size": 68,
+          "units": "degrees_north"
+        },
+        "longitude": {
+          "first": "80.125",
+          "last": "99.875",
+          "size": 80,
+          "units": "degrees_east"
+        }
+      },
+      "variables": {
+        "eastward_wind": {
+          "dims": [
+            "time",
+            "latitude",
+            "longitude"
+          ],
+          "shape": [
+            31,
+            68,
+            80
+          ],
+          "units": "m s-1",
+          "min": -12.380000114440918,
+          "max": 6.78000020980835,
+          "mean": -3.415919610348777,
+          "missing_pct": 74.68453510436433
+        },
+        "northward_wind": {
+          "dims": [
+            "time",
+            "latitude",
+            "longitude"
+          ],
+          "shape": [
+            31,
+            68,
+            80
+          ],
+          "units": "m s-1",
+          "min": -12.130000114440918,
+          "max": 10.369999885559082,
+          "mean": -3.5973603972549713,
+          "missing_pct": 74.68453510436433
+        }
+      },
+      "title": "Global Ocean - Wind - METOP-B ASCAT - 25km daily Ascending V2",
+      "compatible_for_wind_training": true
+    },
+    {
+      "filename": "oisst-avhrr-v02r01.20200101.nc",
+      "path": "/Users/aadi/Documents/Projects/Ocean_Embed/oisst-avhrr-v02r01.20200101.nc",
+      "dimensions": {
+        "time": 1,
+        "zlev": 1,
+        "lat": 720,
+        "lon": 1440
+      },
+      "coordinates": {
+        "time": {
+          "first": "2020-01-01T12:00:00.000000000",
+          "last": "2020-01-01T12:00:00.000000000",
+          "size": 1,
+          "units": ""
+        },
+        "latitude": {
+          "first": "-89.875",
+          "last": "89.875",
+          "size": 720,
+          "units": "degrees_north"
+        },
+        "longitude": {
+          "first": "0.125",
+          "last": "359.875",
+          "size": 1440,
+          "units": "degrees_east"
+        }
+      },
+      "variables": {
+        "anom": {
+          "dims": [
+            "time",
+            "zlev",
+            "lat",
+            "lon"
+          ],
+          "shape": [
+            1,
+            1,
+            720,
+            1440
+          ],
+          "units": "Celsius",
+          "min": -9.15999984741211,
+          "max": 7.309999942779541,
+          "mean": 0.298122108285348,
+          "missing_pct": 33.33815586419753
+        },
+        "err": {
+          "dims": [
+            "time",
+            "zlev",
+            "lat",
+            "lon"
+          ],
+          "shape": [
+            1,
+            1,
+            720,
+            1440
+          ],
+          "units": "Celsius",
+          "min": 0.10999999940395355,
+          "max": 0.7400000095367432,
+          "mean": 0.2102342550688509,
+          "missing_pct": 33.33815586419753
+        },
+        "ice": {
+          "dims": [
+            "time",
+            "zlev",
+            "lat",
+            "lon"
+          ],
+          "shape": [
+            1,
+            1,
+            720,
+            1440
+          ],
+          "units": "%",
+          "min": 0.14999999105930328,
+          "max": 1.0,
+          "mean": 0.8696989015667148,
+          "missing_pct": 86.89747299382717
+        },
+        "sst": {
+          "dims": [
+            "time",
+            "zlev",
+            "lat",
+            "lon"
+          ],
+          "shape": [
+            1,
+            1,
+            720,
+            1440
+          ],
+          "units": "Celsius",
+          "min": -1.7999999523162842,
+          "max": 32.22999954223633,
+          "mean": 13.849288542288242,
+          "missing_pct": 33.33815586419753
+        }
+      },
+      "title": "NOAA/NCEI 1/4 Degree Daily Optimum Interpolation Sea Surface Temperature (OISST) Analysis, Version 2.1 - Final",
+      "compatible_for_wind_training": false
+    }
+  ]
+}

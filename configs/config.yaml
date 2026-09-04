@@ -1,0 +1,19 @@
+data:
+  input_length: 7
+  forecast_horizon: 1
+  target_variables: [eastward_wind, northward_wind]
+training:
+  batch_size: 2
+  epochs: 5
+  learning_rate: 0.001
+convlstm:
+  hidden_channels: 8
+  layers: 2
+  kernel_size: 3
+vit:
+  patch_size: 8
+  embedding_dim: 32
+  heads: 4
+  layers: 2
+  dropout: 0.1
+split: {train: 0.70, validation: 0.15, test: 0.15}

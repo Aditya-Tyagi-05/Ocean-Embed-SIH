@@ -1,0 +1,10 @@
+xarray
+numpy
+pandas
+netCDF4
+torch
+matplotlib
+fastapi
+uvicorn
+pyyaml
+pytest

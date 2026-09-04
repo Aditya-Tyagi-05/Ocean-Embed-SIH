@@ -1,0 +1,27 @@
+{
+  "dataset_root": "/Users/aadi/Documents/Projects/Ocean_Embed/dataset",
+  "source_files": [
+    "/Users/aadi/Documents/Projects/Ocean_Embed/dataset/jan_20/cmems_obs-wind_glo_phy_my_l3-metopb-ascat-asc-0.25deg_P1D-i_1788106188543.nc"
+  ],
+  "normalization": {
+    "mean": [
+      -3.4159255027770996,
+      -3.597364902496338
+    ],
+    "std": [
+      2.716093063354492,
+      2.3625800609588623
+    ]
+  },
+  "input_length": 7,
+  "forecast_horizon": 1,
+  "seed": 42,
+  "device": "mps",
+  "grid": [
+    68,
+    80
+  ],
+  "epochs": 50,
+  "batch_size": 4,
+  "learning_rate": 0.0005
+}
