@@ -1,6 +1,42 @@
-inspect_wind.py 
+# Python cache
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+
+# PyTorch / ML checkpoints
+checkpoints/
+*.pt
+*.pth
+*.ckpt
+
+# Large datasets
+data/
+datasets/
+*.nc
+*.nc4
+*.h5
+*.hdf5
+
+# Generated files
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Environment/secrets
+.env
+
+inspect_wind.py
 Ocean_Embed_Complete_PRD.md
 OCEAN_EMBED_PROJECT.md
 wind_speed.png
-.pytest_cache/
-.vscode/
